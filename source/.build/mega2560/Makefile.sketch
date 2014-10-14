@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/mega2560/src/sketch.cpp : src/sketch.ino
+	@mkdir -p .build/mega2560/src
+	@echo [93msrc/sketch.ino[0m
+	@/usr/bin/ino preproc  -o $@ $^
+
+
+all : .build/mega2560/src/sketch.cpp
+	@true
+
